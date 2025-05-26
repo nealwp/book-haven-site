@@ -1,0 +1,39 @@
+:root {
+  --gray: #3f5461;
+  --green: #3e5461;
+  --black: #131c26;
+  --white: #fff;
+}
+
+header {
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--black);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+header > img {
+  width: 70px;
+  height: 70px;
+}
+
+nav {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+header > nav {
+  margin-left: auto;
+}
+
+nav > a {
+  background-color: var(--gray);
+  text-decoration: none;
+  color: var(--white);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 19.6px;
+}
