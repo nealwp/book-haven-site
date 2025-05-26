@@ -6,6 +6,7 @@
   --blue: #2e2e4e;
   --red: #742c36;
   --gray-text: #b3b3b3;
+  --gray-border: #d9d9d9;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--black);
 }
@@ -62,7 +63,7 @@ nav > a {
 }
 
 .hero-img {
-  width: 100vw;
+  width: 100vmax;
 }
 
 footer {
@@ -118,4 +119,78 @@ footer > button {
   list-style-type: none;
   justify-content: space-evenly;
   margin-top: 20px;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.gallery-header > input {
+  border-style: solid;
+  border-radius: 19.6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-width: 1px;
+  border-color: var(--gray-border);
+}
+
+.gallery-header > button {
+  color: var(--white);
+  background-color: var(--red);
+  border: none;
+  border-radius: 19.6px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.gallery-grid {
+  display: grid;
+  justify-items: center;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-item {
+  max-width: 424px;
+  display: flex;
+  flex-direction: column;
+  border-color: var(--gray-border);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.gallery-item > h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.gallery-item > p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: var(--gray);
+}
+
+.gallery-item > span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.gallery-item > button {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 19.6px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
 }
