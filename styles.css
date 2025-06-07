@@ -194,3 +194,42 @@ footer > button {
   padding-bottom: 10px;
   font-size: 14px;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.event-schedule {
+  max-width: 750px;
+  min-width: 750px;
+  text-align: center;
+}
+
+.section-title {
+  padding-bottom: 25px;
+}
+
+.event-list > li {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  list-style-type: none;
+  border-bottom: 1px;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: var(--gray-text);
+}
+
+.event-list > li > h3 {
+  text-align: left;
+  padding-bottom: 15px;
+  color: var(--gray);
+}
+
+.event-list > li > div {
+  text-align: right;
+}
