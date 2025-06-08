@@ -306,3 +306,42 @@ section {
 .add-to-cart-button {
   cursor: pointer;
 }
+
+#contact-us {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+#contactForm {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contactForm button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background-color: #555;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  display: block;
+  margin-top: -8px;
+  margin-bottom: 12px;
+}

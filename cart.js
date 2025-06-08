@@ -1,13 +1,27 @@
-const cart = [];
+if (!sessionStorage.getItem("cart")) {
+  sessionStorage.setItem("cart", JSON.stringify([]));
+}
+
+function getCart() {
+  return JSON.parse(sessionStorage.getItem("cart"));
+}
+
+function saveCart(cart) {
+  sessionStorage.setItem("cart", JSON.stringify(cart));
+}
 
 function addItem(item) {
+  const cart = getCart();
   cart.push(item);
+  saveCart(cart);
 }
 
 function empty() {
+  const cart = getCart();
   while (cart.length > 0) {
     cart.shift();
   }
+  saveCart(cart);
 }
 
 const cartModal = document.getElementById("cartModal");
@@ -21,6 +35,7 @@ closeCartBtn.onclick = () => {
 };
 
 clearCartBtn.onclick = () => {
+  const cart = getCart();
   if (cart.length) {
     empty();
     alert("Your cart has been cleared.");
@@ -31,6 +46,7 @@ clearCartBtn.onclick = () => {
 };
 
 processOrderBtn.onclick = () => {
+  const cart = getCart();
   if (cart.length > 0) {
     alert("Order processed!");
     empty();
@@ -42,6 +58,7 @@ processOrderBtn.onclick = () => {
 };
 
 function renderItems() {
+  const cart = getCart();
   cartItemsList.innerHTML = "";
   if (cart.length === 0) {
     cartItemsList.innerHTML = "<li>Your cart is empty.</li>";
