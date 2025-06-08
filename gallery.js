@@ -1,3 +1,5 @@
+import cart from "./cart.js";
+
 const galleryItems = [
   {
     src: "public/Client3_Book1.png",
@@ -77,7 +79,7 @@ function createGridItem(item) {
       <span>$${item.cost}</span>`;
 
   const addButton = document.createElement("button");
-  addButton.onclick = () => alert("item added to cart.");
+  addButton.onclick = () => cart.addItem(item);
   addButton.innerText = "Add to Cart";
   addButton.classList.add("add-to-cart-button");
 
@@ -89,3 +91,9 @@ for (const item of galleryItems) {
   const gridItem = createGridItem(item);
   galleryGrid.append(gridItem);
 }
+
+const viewCartButton = document.getElementById("view-cart-button");
+
+viewCartButton.onclick = () => {
+  cart.show();
+};
