@@ -66,6 +66,35 @@ nav > a {
   width: 100vmax;
 }
 
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(20%) blur(7px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-foreground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px; /* Set to whatever size you want */
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
 footer {
   display: flex;
   background-color: var(--blue);
@@ -84,6 +113,7 @@ footer > button {
   padding: 10px;
   border-radius: 19.6px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .footer-nav > div {
@@ -198,7 +228,6 @@ footer > button {
 section {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -232,4 +261,44 @@ section {
 
 .event-list > li > div {
   text-align: right;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal input {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.modal-buttons button {
+  margin: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }

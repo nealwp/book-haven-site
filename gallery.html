@@ -12,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -29,76 +29,14 @@
       <div class="hero">
         <h1>Book Haven Bookstore</h1>
       </div>
-      <div class="gallery-header">
-        <h2>Gallery</h2>
-        <input type="text" name="search" placeholder="Search" />
-        <button>View Cart</button>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="public/Client3_Book1.png" />
-          <h3>Book Title</h3>
-          <p>description</p>
-          <span>$0</span>
-          <button>Add to Cart</button>
+      <section>
+        <div class="gallery-header">
+          <h2>Gallery</h2>
+          <input type="text" name="search" placeholder="Search" />
+          <button>View Cart</button>
         </div>
-        <div class="gallery-item">
-          <img src="public/Client3_Book2.png" />
-          <h3>Book Title</h3>
-          <p>description</p>
-          <span>$0</span>
-          <button>Add to Cart</button>
-        </div>
-        <div class="gallery-item">
-          <img src="public/Client3_Book3.png" />
-          <h3>Book Title</h3>
-          <p>description</p>
-          <span>$0</span>
-          <button>Add to Cart</button>
-        </div>
-        <div class="gallery-item">
-          <img src="public/Client3_Magazine1.png" />
-          <h3>Book Title</h3>
-          <p>description</p>
-          <span>$0</span>
-          <button>Add to Cart</button>
-        </div>
-        <div class="gallery-item">
-          <img src="public/Client3_Magazine2.png" />
-          <h3>Book Title</h3>
-          <p>description</p>
-          <span>$0</span>
-          <button>Add to Cart</button>
-        </div>
-        <div class="gallery-item">
-          <img src="public/Client3_Magazine3.png" />
-          <h3>Book Title</h3>
-          <p>description</p>
-          <span>$0</span>
-          <button>Add to Cart</button>
-        </div>
-        <div class="gallery-item">
-          <img src="public/Client3_ToteBag.png" />
-          <h3>Book Title</h3>
-          <p>description</p>
-          <span>$0</span>
-          <button>Add to Cart</button>
-        </div>
-        <div class="gallery-item">
-          <img src="public/Client3_Notebook.png" />
-          <h3>Book Title</h3>
-          <p>description</p>
-          <span>$0</span>
-          <button>Add to Cart</button>
-        </div>
-        <div class="gallery-item">
-          <img src="public/Client3_Stickers.png" />
-          <h3>Book Title</h3>
-          <p>description</p>
-          <span>$0</span>
-          <button>Add to Cart</button>
-        </div>
-      </div>
+        <div id="gallery-grid" class="gallery-grid"></div>
+      </section>
     </main>
     <footer>
       <div>Navigation</div>
@@ -108,7 +46,9 @@
         <li>Gallery</li>
         <li>Events</li>
       </ul>
-      <button>Click here to subscribe to our newsletter!</button>
+      <button id="subscribe-btn">
+        Click here to subscribe to our newsletter!
+      </button>
       <div>Follow Book Haven</div>
       <ul>
         <li><i class="fa-brands fa-x-twitter"></i></li>
@@ -117,5 +57,20 @@
         <li><i class="fa-brands fa-linkedin"></i></li>
       </ul>
     </footer>
+    <div id="subscribeModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h2>Subscribe</h2>
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <span
+          id="emailError"
+          style="color: red; font-size: 0.9em; display: none"
+        ></span>
+        <div class="modal-buttons">
+          <button id="subscribeNowBtn">Subscribe Now</button>
+          <button id="cancelBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
