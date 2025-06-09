@@ -292,6 +292,7 @@ section {
 }
 
 .modal-buttons button {
+  cursor: pointer;
   margin: 5px;
 }
 
@@ -344,4 +345,143 @@ section {
   display: block;
   margin-top: -8px;
   margin-bottom: 12px;
+}
+
+.promotions {
+  background-color: #fdf7f1;
+  padding: 40px 20px;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 700px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.promotions h2 {
+  text-align: center;
+  color: var(--blue);
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.promotions ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.promotions li {
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.promotions li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+}
+
+.latest-arrivals {
+  background-color: #eef6f9;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 700px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.latest-arrivals h2 {
+  color: var(--blue);
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.latest-arrivals p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.browse-button {
+  display: inline-block;
+  background-color: var(--gray);
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.special-event {
+  background-color: #fff0f5;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 700px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.special-event h2 {
+  color: var(--blue);
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.special-event p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.event-button {
+  display: inline-block;
+  background-color: var(--blue);
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product-categories {
+  background-color: #f0f8ff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.product-categories h2 {
+  font-size: 1.8em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
 }

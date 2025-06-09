@@ -14,6 +14,7 @@ function addItem(item) {
   const cart = getCart();
   cart.push(item);
   saveCart(cart);
+  alert(`Item ${item.title} added to cart!`);
 }
 
 function empty() {
