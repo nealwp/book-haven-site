@@ -27,13 +27,19 @@ subscribeNowBtn.onclick = () => {
     emailError.style.display = "none";
     alert("Thank you for subscribing!");
     modal.style.display = "none";
-    emailInput.value = ""; // clear the input
+    emailInput.value = "";
   }
 };
 
-// Optional: close modal if user clicks outside it
 window.onclick = (event) => {
   if (event.target === modal) {
     modal.style.display = "none";
   }
 };
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});

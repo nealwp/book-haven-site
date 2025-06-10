@@ -22,18 +22,7 @@ header {
   margin-bottom: auto;
 }
 
-header > img {
-  width: 70px;
-  height: 70px;
-}
-
 header > h1 {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-nav {
-  margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -63,7 +52,11 @@ nav > a {
 }
 
 .hero-img {
-  width: 100vmax;
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .hero-container {
@@ -102,6 +95,14 @@ footer {
   height: 326px;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    height: 600px;
+  }
 }
 
 footer > button {
@@ -183,8 +184,14 @@ footer > button {
   grid-template-columns: repeat(3, 1fr);
 }
 
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .gallery-item {
-  max-width: 424px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   border-color: var(--gray-border);
@@ -532,4 +539,77 @@ section {
 
 .store-hours li {
   margin-bottom: 12px;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.navbar > img {
+  width: 70px;
+  height: 70px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: var(--gray);
+  color: var(--white);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 19.6px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li a {
+    background-color: var(--white);
+    color: var(--black);
+    padding-left: 5px;
+    padding-right: 32px;
+    border-radius: 0px;
+  }
+
+  .navbar > img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
